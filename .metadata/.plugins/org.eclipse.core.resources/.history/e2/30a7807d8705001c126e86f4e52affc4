@@ -1,0 +1,33 @@
+package springmvc.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
+
+import springmvc.entities.User;
+
+@Component
+public class UserDao {
+	
+	@Autowired
+	@Qualifier("jdbcTemplate")
+	private JdbcTemplate jdbcTemplate;
+	
+	public int insert(User user) {
+		//insert query
+		System.out.println("Inside user jdbc function!");
+		String query = "insert into user(name,email,password) values(?,?,?)";
+        //fire Query
+        int result = this.jdbcTemplate.update(query, user.getUserName(), 
+        		user.getUserEmail(), user.getUserPassword());
+        
+        return result;		
+		
+	}
+	
+	
+	
+
+
+}

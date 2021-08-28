@@ -1,0 +1,13 @@
+package com.viraj.javaconfig;
+
+import org.springframework.stereotype.Component;
+
+@Component
+//@Bean annotation can also be used in place of @Component;
+
+public class Student {
+	
+	
+	
+	
+}

@@ -1,0 +1,12 @@
+package springmvc.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class RequestHandler {
+	
+	@RequestMapping("/register1")
+	public String register() {
+		return "register";
+	}
+
+}

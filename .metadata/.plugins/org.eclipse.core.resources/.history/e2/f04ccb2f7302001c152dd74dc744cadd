@@ -1,0 +1,11 @@
+package com.viraj.javaconfig;
+
+import org.springframework.context.annotation.Configuration;
+
+//This file will act as the XML file in its absence.
+//Add @Configuration to tell spring to use this as configuration class instead of an XML file.
+@Configuration
+public class JavaConfig {
+	
+
+}

@@ -1,0 +1,9 @@
+package com.viraj.javaconfig;
+
+public class Major {
+	
+	public void display() {
+		System.out.println("We are inside Major.class");
+	}
+
+}

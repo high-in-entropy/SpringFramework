@@ -1,0 +1,33 @@
+package springmvc.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+@Configuration
+public class SpringConfig {
+	
+	@Bean("dataSource")
+	public DriverManagerDataSource getDataSource() {
+		
+		DriverManagerDataSource dataSource = new DriverManagerDataSource();
+		dataSource.setDriverClassName("");
+		dataSource.setUrl("");
+		dataSource.setUsername("");
+		dataSource.setPassword("");
+		System.out.println("Inside DriverManager DataSouce mthod declaration");
+		return dataSource;
+	}
+	
+	@Bean("jdbcTemplate")
+	public JdbcTemplate getJdbcTemplate() {
+		
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSource());
+		System.out.println("Inside getJDBC method!");
+		return jdbcTemplate;
+	}
+	
+	
+
+}

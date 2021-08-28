@@ -1,0 +1,25 @@
+package springmvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HomeController {
+	
+	
+	/*
+	 * Add the address suffix here. For example if you need an about.jsp page, add
+	 * /about and return "about" form the about method. the ViewController we
+	 * declared in config.xml will take care of ammending the URL path with suffix
+	 * and prefix(=.jsp). So in short, everytime you wanna create a new page, just
+	 * add its method here and create it in views folder.
+	 */ 
+	@RequestMapping("/")
+	public String home() {
+		System.out.println("this is home method in Controller");
+		return "index";
+	}
+	
+	
+
+}

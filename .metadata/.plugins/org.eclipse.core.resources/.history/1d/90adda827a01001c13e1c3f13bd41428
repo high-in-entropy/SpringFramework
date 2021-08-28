@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Beans Namespace can be downloaded from Spring Documentation PDF -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+    <!-- This is setter based injection to Spring IOC Container -->
+    
+    <bean class="com.viraj.autowire.Address" name="address">
+    	<property name="street">
+    		<value>Hazira Road</value>
+    	</property>
+    	
+    	<property name="city">
+    		<value>Surat</value>
+    	</property>
+    </bean>
+   
+   <!-- By name Checks the parent objects by name. The names of id of parent obj and obj declaration in Class should 
+   match.
+   //You can either write autowired above the object to be Autowired or add byName in your XML File.
+   byType willcheck for the type of the obj nd then go about it. Name matching not 
+   required here.  
+   autowire="constructor" will call the constructor method and build the object-->
+   
+ 	<bean class="com.viraj.autowire.Employee" name="emp1" />
+ 
+ </beans>

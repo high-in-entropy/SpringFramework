@@ -1,0 +1,5 @@
+package com.viraj.springjdbc.entities;
+
+public class Student {
+
+}

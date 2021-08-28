@@ -1,0 +1,5 @@
+package com.viraj.stereotype;
+
+public class Student {
+
+}

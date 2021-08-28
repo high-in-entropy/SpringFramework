@@ -1,0 +1,6 @@
+package com.viraj.reference;
+
+//This class depends on a B object Reference;
+public class A {
+
+}

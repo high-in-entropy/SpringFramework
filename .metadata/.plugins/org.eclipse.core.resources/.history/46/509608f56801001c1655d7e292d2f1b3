@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Beans Namespace can be downloaded from Spring Documentation PDF -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+    <!-- This is setter based injection to Spring IOC Container -->
+    
+    <bean class="com.viraj.springcore.Student" name="student1">
+    	<property name="studentID">
+    		<value>1415666</value>
+    	</property>
+    	
+    	<property name="studentName">
+    		<value>Viraj Mohile</value>
+    	</property>
+    	
+    	<property name="studentAddress">
+    		<value>Bangalore Urban</value>
+    	</property>
+    </bean>
+    
+    <!-- P Schema way of setting values. Need P Schema in bean namespace -->
+    <bean class="com.viraj.springcore.Student" name="student2" p:studentID="1455666" p:studentName="Amey Mohile" p:studentAddress="Surat"/>
+    
+    <bean class="com.viraj.collections.Employee" name="employee1">
+    	<property name="employeeID" value="663429"></property>
+    	
+    	<property name="phones">
+    	<list>
+    	<value>8780567888</value>
+    	<value>7764098871</value>
+    	<value>6864309752</value>
+    	</list>
+    	</property>
+    	
+    	<property name="courses">
+    	<map>
+    	<entry key="Finance" value="3months"/>
+    	<entry key="Economics" value="7months"/>
+    	<entry key="Game Theory" value="1.5Years"/>
+    	</map>
+    	</property>  	
+    </bean>
+    
+    <bean class="com.viraj.reference.B" name="BRef">
+    <property name="number" value="12345"/>
+    </bean>
+    
+    <bean class="com.viraj.reference.A" name="ARef">
+    <property name="number" value="33576"/>
+    <property name="obj">
+    <ref bean="BRef"/>
+    </property>
+    </bean>
+ 
+ 	
+ 
+ </beans>

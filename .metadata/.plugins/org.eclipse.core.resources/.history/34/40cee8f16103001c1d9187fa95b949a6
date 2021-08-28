@@ -1,0 +1,19 @@
+package com.viraj.springjdbc;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "MySQL Operations" );
+        
+        ApplicationContext context = new ClassPathXmlApplicationContext("com/viraj/sprinjdbc/context.xml");
+        context.getBean(")
+    }
+}
